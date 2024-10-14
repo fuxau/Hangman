@@ -133,5 +133,69 @@
   <ItemGroup>
     <Resource Include="pictures\p.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\m.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mots.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\img\1.png" />
+    <Resource Include="pictures\img\2.png" />
+    <Resource Include="pictures\img\3.png" />
+    <Resource Include="pictures\img\4.png" />
+    <Resource Include="pictures\img\5.png" />
+    <Resource Include="pictures\img\6.png" />
+    <Resource Include="pictures\img\7.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

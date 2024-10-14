@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace Hangman
 {
@@ -27,11 +28,12 @@ namespace Hangman
             InitializeComponent();
         }
 
-        string[] listmot = { "vache", "bache", "chat", "cheval", "ordinateur" };
+
+        string[] listmot = File.ReadAllLines("../../mots.txt").ToArray();
         Random rnd = new Random();
         string motChoisi;  // Mot sélectionné
         char[] motAffiche;  // Mot avec les lettres devinées et les underscores
-        int vie = 5;  // Nombre de vies restantes
+        int vie = 6;  // Nombre de vies restantes
 
         // Lors du chargement de la fenêtre
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -44,10 +46,12 @@ namespace Hangman
         {
             motChoisi = listmot[rnd.Next(listmot.Length)];
             motAffiche = new string('_', motChoisi.Length).ToCharArray();  // Créer un tableau d'underscores pour le mot affiché
-            vie = 5;  // Réinitialiser les vies
+            vie = 6;  // Réinitialiser les vies
+            LifeBox.Text = vie.ToString();
             UpdateMotAffiche();  // Mettre à jour l'affichage du mot
             EnableAllButtons();  // Activer tous les boutons
         }
+
 
         // Fonction appelée lors du clic sur un bouton de lettre
         private void BTN_click(object sender, RoutedEventArgs e)
@@ -62,7 +66,7 @@ namespace Hangman
                 for (int i = 0; i < motChoisi.Length; i++)
                 {
                     if (motChoisi[i].ToString() == letter)
-                    {
+                    {   
                         motAffiche[i] = motChoisi[i];  // Remplacer l'underscore par la lettre correcte
                     }
                 }
@@ -70,6 +74,9 @@ namespace Hangman
             else
             {
                 vie--;  // Réduire le nombre de vies
+                LifeBox.Text = vie.ToString();
+                Uri pictures = new Uri("pictures/img/" + vie + ".png", UriKind.Relative);
+                Img_Hangman.Source = new BitmapImage(pictures);
                 if (vie == 0)
                 {
                     MessageBox.Show($"Perdu ! Le mot était : {motChoisi}");
@@ -105,6 +112,7 @@ namespace Hangman
                 }
             }
         }
+
 
 
     }

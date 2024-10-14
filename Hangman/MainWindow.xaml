@@ -25,13 +25,23 @@
                 <ColumnDefinition Width="9.25*"/>
                 <ColumnDefinition Width="8.25*"/>
             </Grid.ColumnDefinitions>
-            <Label Content="HANGMAN" Grid.Column="0"/>
+            <Label Content="HANGMAN" Grid.Column="0" FontWeight="Bold" Foreground="White"/>
+            <Viewbox Grid.Column="1"   >
+                <TextBox Name="LifeBox" Background="Transparent" BorderBrush="Transparent" Width="35" FontFamily="Montserrat">
+
+                </TextBox>
+            </Viewbox> 
+            <Button Grid.Column="2" Name="Mots" Content="M"></Button>
+            
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="68.75*"/>
                 <ColumnDefinition Width="31.25*"/>
             </Grid.ColumnDefinitions>
+            <Grid>
+                <Image x:Name="Img_Hangman" HorizontalAlignment="Center" VerticalAlignment="Center" Source="pictures/img/7.png"></Image>
+            </Grid>
             <Grid Grid.Column="1" x:Name="LetterButtons">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -55,42 +65,77 @@
                 <Button Grid.Column="1" Grid.Row="1" Name="A" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
                     <Image Source="pictures/a-keyboard-button.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="55"/>
                 </Button>
-                <Button Grid.Column="2" Grid.Row="1" Name="B" Content="B" Click="BTN_click"/>
-                <Button Grid.Column="3" Grid.Row="1" Name="C" Content="C" Click="BTN_click"/>
-                <Button Grid.Column="4" Grid.Row="1" Name="D" Content="D" Click="BTN_click"/>
+                <Button Grid.Column="2" Grid.Row="1" Name="B" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/b.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="3" Grid.Row="1" Name="C" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/c.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="4" Grid.Row="1" Name="D" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/d.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
 
-                <Button Grid.Column="1" Grid.Row="2" Name="E" Content="E" Click="BTN_click"/>
-                <Button Grid.Column="2" Grid.Row="2" Name="F" Content="F" Click="BTN_click"/>
-                <Button Grid.Column="3" Grid.Row="2" Name="G" Content="G" Click="BTN_click"/>
+                <Button Grid.Column="1" Grid.Row="2" Name="E" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/e.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="2" Grid.Row="2" Name="F" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/f.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="3" Grid.Row="2" Name="G" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/g.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
                 <Button Grid.Column="4" Grid.Row="2" Name="H" Content="H" Click="BTN_click"/>
 
                 <Button Grid.Column="1" Grid.Row="3" Name="I" Content="I" Click="BTN_click"/>
                 <Button Grid.Column="2" Grid.Row="3" Name="J" Content="J" Click="BTN_click"/>
                 <Button Grid.Column="3" Grid.Row="3" Name="K" Content="K" Click="BTN_click"/>
-                <Button Grid.Column="4" Grid.Row="3" Name="L" Content="L" Click="BTN_click"/>
+                <Button Grid.Column="4" Grid.Row="3" Name="L" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/l.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
 
-                <Button Grid.Column="1" Grid.Row="4" Name="M" Content="M" Click="BTN_click"/>
-                <Button Grid.Column="2" Grid.Row="4" Name="N" Content="N" Click="BTN_click"/>
-                <Button Grid.Column="3" Grid.Row="4" Name="O" Content="O" Click="BTN_click"/>
+                <Button Grid.Column="1" Grid.Row="4" Name="M" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/m.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="2" Grid.Row="4" Name="N"  Click="BTN_click" Background="Transparent " BorderBrush="Transparent"> 
+                    <Image Source="pictures/n.png"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+
+                <Button Grid.Column="3" Grid.Row="4" Name="O" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/o.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
                 <Button Grid.Column="4" Grid.Row="4" Name="P"  Click="BTN_click" Background="Transparent" BorderBrush="Transparent">
                     <Image Source="pictures/p.png" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
                 </Button>
 
-                <Button Grid.Column="1" Grid.Row="5" Name="Q" Content="Q" Click="BTN_click"/>
-                <Button Grid.Column="2" Grid.Row="5" Name="R" Content="R" Click="BTN_click"/>
-                <Button Grid.Column="3" Grid.Row="5" Name="S" Content="S" Click="BTN_click"/>
-                <Button Grid.Column="4" Grid.Row="5" Name="T" Content="T" Click="BTN_click"/>
+                <Button Grid.Column="1" Grid.Row="5" Name="Q" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/q.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="2" Grid.Row="5" Name="R" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/r.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="3" Grid.Row="5" Name="S" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/s.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="4" Grid.Row="5" Name="T" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/t.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
 
                 <Button Grid.Column="1" Grid.Row="6" Name="U" Click="BTN_click">
                     <Image Source="pictures/u.png" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 </Button>
                 <Button Grid.Column="2" Grid.Row="6" Name="V" Content="V" Click="BTN_click"/>
                 <Button Grid.Column="3" Grid.Row="6" Name="W" Content="W" Click="BTN_click"/>
-                <Button Grid.Column="4" Grid.Row="6" Name="X" Content="X" Click="BTN_click"/>
+                <Button Grid.Column="4" Grid.Row="6" Name="X" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/x.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Button>
 
-                <Button Grid.Column="1" Grid.Row="7" Name="Y" Content="Y" Click="BTN_click"/>
-                <Button Grid.Column="2" Grid.Row="7" Name="Z" Content="Z" Click="BTN_click"/>
+                <Button Grid.Column="1" Grid.Row="7" Name="Y" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/y.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
+                <Button Grid.Column="2" Grid.Row="7" Name="Z" Background="Transparent" BorderBrush="Transparent" Click="BTN_click">
+                    <Image Source="pictures/z.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
             </Grid>
         </Grid>
         <Grid Grid.Row="2">
@@ -99,7 +144,10 @@
                 <ColumnDefinition Width="8*"/>
                 <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
-            <TextBox Grid.Column="1" Name="Textbox" FontSize="48" TextAlignment="Center" Background="Transparent" BorderThickness="0" FontWeight="Bold"/>
+            <Viewbox Grid.Column="1" >
+                <TextBox Name="Textbox" FontSize="48" TextAlignment="Center" Background="Transparent" BorderThickness="0" FontWeight="Bold" FontFamily="Montserrat"/>
+            </Viewbox>
+            
         </Grid>
     </Grid>
 
